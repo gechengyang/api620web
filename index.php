@@ -5,6 +5,7 @@
     <meta name="description" content="This is a program which calculate tank according to API620-2013" >
     <meta name="keyword" content="API620,tank,calculation,chinahualu" >
     <link rel="stylesheet" type="text/css" href="index.css" >
+    <script src="index.js"></script>
     <title> HuaLu Tank Demo </title>
 </head>
 
@@ -83,9 +84,9 @@
             <div class="lanmu1">
                 <div class="datavalue">
                     <form>
-                        <p>项目名称：<input type="text" /></p>
+                        <p>项目名称：<input type="text" maxlength="13" /></p>
                         <br />
-                        <p>设备名称：<input type="text" /></p>
+                        <p>设备名称：<input type="text" maxlength="13" /></p>
                     </form>
                 </div>
                 <div class="clear">
@@ -95,9 +96,9 @@
             <div class="lanmu2">
                 <div class="datavalue">
                     <form>
-                        <p>装置代号：<input type="text" /></p>
+                        <p>装置代号：<input type="text" maxlength="13" /></p>
                         <br />
-                        <p>设备位号：<input type="text" /></p>
+                        <p>设备位号：<input type="text" maxlength="13" /></p>
                     </form>
                 </div>
                 <div class="clear">
@@ -117,7 +118,7 @@
             <div class="lanmu1">
                 <div class="datavalue">
                     <form>
-                        <p>设计压力(MPa)：<input type="text" /></p>
+                        <p>设计压力(MPa)：<input id="DesignPressure"  type="text" style="ime-mode:disabled"  onblur="checkNum(this,0,35)" onKeyPress="inputNumZ(this)" onkeyup="checkCn(this)" /></p>
                     </form>
                 </div>
                 <div class="clear">
@@ -127,7 +128,7 @@
             <div class="lanmu2">
                 <div class="datavalue">
                     <form>
-                        <p>设计温度(℃)：<input type="text" /></p>
+                        <p>设计温度(℃)：<input id="DesignTemp"  type="text" style="ime-mode:disabled"  onblur="checkNum(this,-253,800)" onKeyPress="inputNumZF(this)" onkeyup="checkCn(this)" /></p>
                     </form>
                 </div>
                 <div class="clear">
@@ -147,9 +148,9 @@
             <div class="lanmu1">
                 <div class="datavalue">
                     <form>
-                        <p>筒体直径(mm)：<input type="text" /></p>
+                        <p>筒体直径(mm)：<input id="ShellDiameter"  type="text" style="ime-mode:disabled"  onblur="checkNum(this,0,13000)" onKeyPress="inputNumZ(this)" onkeyup="checkCn(this)" /></p>
                         <br />
-                        <p>筒体厚度(mm)：<input type="text" /></p>
+                        <p>筒体厚度(mm)：<input id="ShellThickness"  type="text" style="ime-mode:disabled"  onblur="checkNum(this,0,200)" onKeyPress="inputNumZ(this)" onkeyup="checkCn(this)" /></p>
                     </form>
                 </div>
                 <div class="clear">
@@ -167,7 +168,7 @@
                         </P>
                         <br />
                         <p>
-                        许用应力(MPa)：<input type="text" />
+                        许用应力(MPa)：<input type="text" readonly="readonly" s/>
                         </p>
                     </form>
                 </div>
@@ -189,9 +190,9 @@
             <div class="lanmu1">
                 <div class="datavalue">
                     <form>
-                        <p>封头直径(mm)：<input type="text" /></p>
+                        <p>封头直径(mm)：<input id="HeadDiameter"  type="text" style="ime-mode:disabled"  onblur="checkNum(this,0,13000)" onKeyPress="inputNumZ(this)" onkeyup="checkCn(this)" /></p>
                         <br />
-                        <p>封头厚度(mm)：<input type="text" /></p>
+                        <p>封头厚度(mm)：<input id="HeadThickness"  type="text" style="ime-mode:disabled"  onblur="checkNum(this,0,200)" onKeyPress="inputNumZ(this)" onkeyup="checkCn(this)" /></p>
                     </form>
                 </div>
                 <div class="clear">
@@ -209,7 +210,7 @@
                         </P>
                         <br />
                         <p>
-                        许用应力(MPa)：<input type="text" />
+                        许用应力(MPa)：<input type="text" readonly="readonly" />
                         </p>
                     </form>
                 </div>
